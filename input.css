@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url('../img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+}
+
+#cta{
+    background-image: url('../img/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+/* Hamburger Menu */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top , .hamburger-middle , .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background: #000000;
+    border-radius: 5px;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+}
+
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.open .hamburger-middle{
+    display: none;
+}
+
+.open .hamburger-bottom{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+#menu {
+   border-radius: 15px;
+   overflow: hidden;
+   padding: 8px;
+}
+
+#menu a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+#menu a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+#menu a:hover {
+    box-shadow: 0px 0px 10px 1px hsl(8, 100%, 72%);
+    /* border-radius: 10px; */
+}
+
+.icon-link {
+    transition: all .3s;
+}
+
+.icon-link:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.icon-link-color:hover {
+    filter: invert(70%) sepia(15%) saturate(80) hue-rotate(356deg) brightness(150%) contrast(170%);
+}
+
+
+@media (max-width: 576px) {
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+
+    #cta{
+        background-image: url('../img/bg-simplify-section-mobile.svg');
+    }
+}
